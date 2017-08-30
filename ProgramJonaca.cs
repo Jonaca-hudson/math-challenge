@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,25 +11,27 @@ namespace mathChallenge
 {
 	class Program
 	{
-		int Compare(int num1, int Number2) //main function that shifts and adds each number, returns 0 for false and 1 for true
+		 int Compare(int num1, int num2) //main function that shifts and adds each number, returns 0 for false and 1 for true
 		{
-			int compareTo = (num1 % 10) + (Number2 % 10);
+            int compareTo = (num1 % 10) + (num2 % 10);
 			num1 = num1 / 10;
-			Number2 = Number2 / 10;
-			while (num1 > 0 && Number2 > 0)
+            num2 = num2 / 10;
+            while (num1 > 0 && num2 > 0)
+                while (length != 3 || variable.Length = 3) 
+
 			{
-				int temp = (num1 % 10) + (Number2 % 10);
+				int temp = (num1 % 10) + (num2 % 10);
 
 				if (compareTo != temp)
 					return 0;
 
 				num1 = num1 / 10;
-				Number2 = Number2 / 10;
+                num2 = num2 / 10;
 			}
-			return 1;
+            return 1;
 		}
 
-		static void Main(string[] args)
+		public void Main(string[] args)
 		{
 			//request the first number from the user 
 			int num1;
@@ -42,21 +44,21 @@ namespace mathChallenge
 				Console.WriteLine("Not a valid number, Please try again...");
 				Result1 = Console.ReadLine();
 			}
-			int num1 = Convert.ToInt32(num1);
+            num1 = Convert.ToInt32(Result1);
 
-			//request the second number from the user
-			int Number2;
+            //request the second number from the user
+            int num2;
 			String Result2 = Console.ReadLine();
-			while (!Int32.TryParse(Result2, out Number2) || Number2 < -1 || Number2 > 1000 || num1 < 100)
+			while (!Int32.TryParse(Result2, out num2) || num2 < -1 || num2 > 1000 || num1 < 100)
 
 			{
 				Console.WriteLine("Not a valid number, Please try again...");
 				Result2 = Console.ReadLine();
 			}
-			int num2 = Convert.ToInt32(Result2);
+            num2 = Convert.ToInt32(Result2);
 
-			// assigns each digit a variable
-			int dig1num1, dig2num1, dig3num1 = 0;
+            // assigns each digit a variable
+            int dig1num1, dig2num1, dig3num1 = 0;
 
 			int dig1num2, dig2num2, dig3num2 = 0;
 
@@ -70,9 +72,8 @@ namespace mathChallenge
 			//Console.ReadKey();
 
 			// constructing comparison aka addition variables
-			int total1 = 0;
-			int total2 = 0;
-			int total3 = 0;
+			int total1, total2, total3 = 0;
+			
 
 			//combining corresponding numbers
 			total1 = (dig1num2 + dig1num2);
@@ -89,8 +90,11 @@ namespace mathChallenge
 			{
 				Console.WriteLine("True");
 				Console.WriteLine(a);
-                Console.ReadLine();
-
+				Console.ReadLine();
+				do
+				{
+					Console.WriteLine("play again? [Yes | No]");
+				} while (Console.ReadLine() != "No!");
 
 			}
 		}
