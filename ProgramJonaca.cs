@@ -56,7 +56,7 @@ namespace Redo
                 }
 
                 //prints true or false
-                int total = mods[0];
+                int total = mods[2];
                 bool b = true;
                 int j = 0;
                 while (j < mods.Length)
@@ -64,14 +64,15 @@ namespace Redo
                     int k = mods[j];
                     if (k == total)
                     {
-                        Console.WriteLine("True");
+                        //Console.WriteLine(b);
                     }
                     else
                     {
                         b = false;
+                        //Console.WriteLine(b);
                     }
+                  
                     j++;
-
                 }
                 Console.WriteLine(b);
             }
